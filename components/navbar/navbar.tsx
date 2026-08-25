@@ -10,11 +10,14 @@ export default function Navbar() {
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolled(window.scrollY > 40);
+      setScrolled(window.scrollY > 30);
     };
 
+    window.addEventListener("scroll", handleScroll, {
+      passive: true,
+    });
+
     handleScroll();
-    window.addEventListener("scroll", handleScroll);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
@@ -22,50 +25,26 @@ export default function Navbar() {
   }, []);
 
   return (
-    <motion.header
-      className="fixed left-0 right-0 top-0 z-50"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{
-        duration: 0.6,
-        ease: "easeOut",
-      }}
-    >
-      <motion.div
-        animate={{
-          marginTop: scrolled ? 16 : 0,
-          marginLeft: scrolled ? 18 : 0,
-          marginRight: scrolled ? 18 : 0,
-        }}
-        transition={{
-          duration: 0.6,
-          ease: [0.22, 1, 0.36, 1],
-        }}
-      >
+    <header className="fixed inset-x-0 top-0 z-[9999] pointer-events-none">
+      <div className="pointer-events-auto">
         <Container>
           <motion.nav
+            initial={false}
             animate={{
               height: scrolled ? 68 : 88,
               borderRadius: scrolled ? 999 : 0,
-
               backgroundColor: scrolled
-                ? "rgba(7, 7, 12, 0.68)"
-                : "rgba(7, 7, 12, 0)",
-
+                ? "rgba(0, 0, 0, 0.30)"
+                : "rgba(0, 0, 0, 0)",
               borderColor: scrolled
-                ? "rgba(255,255,255,0.12)"
-                : "rgba(255,255,255,0)",
-
-              backdropFilter: scrolled
-                ? "blur(22px)"
-                : "blur(0px)",
-
+                ? "rgba(255, 255, 255, 0.15)"
+                : "rgba(255, 255, 255, 0)",
               boxShadow: scrolled
-                ? "0 10px 35px rgba(0,0,0,0.22)"
+                ? "0 12px 40px rgba(0,0,0,0.22)"
                 : "0 0 0 rgba(0,0,0,0)",
             }}
             transition={{
-              duration: 0.6,
+              duration: 0.7,
               ease: [0.22, 1, 0.36, 1],
             }}
             className="
@@ -75,17 +54,25 @@ export default function Navbar() {
               items-center
               justify-between
               border
+              px-8
+              backdrop-blur-2xl
             "
           >
             {/* LOGO */}
             <a
               href="#home"
-              className="relative z-10 flex items-center"
+              className="
+                relative
+                z-20
+                flex
+                shrink-0
+                items-center
+              "
             >
               <Image
                 src="/images/logo.png"
                 alt="Rashed"
-                width={120}
+                width={140}
                 height={40}
                 priority
                 className="h-auto w-[140px] object-contain"
@@ -98,55 +85,37 @@ export default function Navbar() {
                 absolute
                 left-1/2
                 top-1/2
+                z-20
                 -translate-x-1/2
                 -translate-y-1/2
               "
             >
-              {/* Glow behind nav */}
               <motion.div
+                initial={false}
                 animate={{
-                  opacity: scrolled ? 1 : 0,
-                  scale: scrolled ? 1 : 0.8,
+                  paddingLeft: scrolled ? 5 : 0,
+                  paddingRight: scrolled ? 5 : 0,
+                  paddingTop: scrolled ? 4 : 0,
+                  paddingBottom: scrolled ? 4 : 0,
+                  borderRadius: scrolled ? 999 : 0,
+                  backgroundColor: scrolled
+                    ? "rgba(0,0,0,0.25)"
+                    : "rgba(0,0,0,0)",
+                  borderColor: scrolled
+                    ? "rgba(255,255,255,0.08)"
+                    : "rgba(255,255,255,0)",
                 }}
                 transition={{
                   duration: 0.6,
                   ease: [0.22, 1, 0.36, 1],
                 }}
                 className="
-                  pointer-events-none
-                  absolute
-                  inset-[-18px]
-                  rounded-full
-                  bg-purple-500/20
-                  blur-2xl
-                "
-              />
-
-              <motion.div
-                animate={{
-                  paddingLeft: scrolled ? 6 : 0,
-                  paddingRight: scrolled ? 6 : 0,
-                  paddingTop: scrolled ? 4 : 0,
-                  paddingBottom: scrolled ? 4 : 0,
-                  borderRadius: scrolled ? 999 : 0,
-                  backgroundColor: scrolled
-                    ? "rgba(8, 8, 18, 0.75)"
-                    : "rgba(8, 8, 18, 0)",
-                  borderColor: scrolled
-                    ? "rgba(140, 70, 255, 0.14)"
-                    : "rgba(140, 70, 255, 0)",
-                }}
-                transition={{
-                  duration: 0.55,
-                  ease: [0.22, 1, 0.36, 1],
-                }}
-                className="
-                  relative
                   flex
                   items-center
                   gap-1
                   border
                   backdrop-blur-xl
+                  whitespace-nowrap
                 "
               >
                 <a
@@ -205,22 +174,22 @@ export default function Navbar() {
               </motion.div>
             </div>
 
-            {/* RIGHT */}
-            <div className="relative z-10 flex items-center">
+            {/* RIGHT SIDE */}
+            <div
+              className="
+                relative
+                z-30
+                ml-auto
+                flex
+                items-center
+                gap-4
+              "
+            >
+              {/* HIRE ME */}
               <motion.a
                 href="#contact"
-                whileHover={{
-                  scale: 1.04,
-                }}
-                whileTap={{
-                  scale: 0.97,
-                }}
-                transition={{
-                  type: "spring",
-                  stiffness: 450,
-                  damping: 24,
-                  mass: 0.4,
-                }}
+                whileHover={{ scale: 1.04 }}
+                whileTap={{ scale: 0.97 }}
                 className="
                   rounded-full
                   bg-white
@@ -239,7 +208,7 @@ export default function Navbar() {
             </div>
           </motion.nav>
         </Container>
-      </motion.div>
-    </motion.header>
+      </div>
+    </header>
   );
 }

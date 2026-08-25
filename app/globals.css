@@ -219,3 +219,40 @@ footer {
     opacity: 0.03;
   }
 }
+/* =========================================
+   HERO → ABOUT MOVING LIGHT
+   ========================================= */
+
+.about-line-beam {
+  position: absolute;
+  top: 0;
+  left: -240px;
+
+  width: 240px;
+  height: 1px;
+
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(251, 146, 60, 0.15) 20%,
+    rgba(251, 146, 60, 0.9) 50%,
+    rgba(251, 146, 60, 0.15) 80%,
+    transparent 100%
+  );
+
+  box-shadow:
+    0 0 6px rgba(251, 146, 60, 0.8),
+    0 0 14px rgba(251, 146, 60, 0.45);
+
+  animation: aboutLineMove 3s linear infinite;
+}
+
+@keyframes aboutLineMove {
+  from {
+    left: -240px;
+  }
+
+  to {
+    left: 100%;
+  }
+}

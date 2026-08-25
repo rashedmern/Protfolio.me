@@ -535,40 +535,6 @@ export default function Hero() {
 
         </div>
       </div>
-
-      {/* ================= SCROLL INDICATOR ================= */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{
-          delay: 1.3,
-          duration: 0.8,
-        }}
-        className="
-          absolute
-          bottom-8
-          right-8
-          hidden
-          items-center
-          gap-3
-          md:flex
-        "
-      >
-        <span className="text-[10px] uppercase tracking-[0.3em] text-white/30">
-          Scroll
-        </span>
-
-        <motion.div
-          animate={{ y: [0, 6, 0] }}
-          transition={{
-            duration: 1.5,
-            repeat: Infinity,
-            ease: "easeInOut",
-          }}
-          className="h-8 w-px bg-white/20"
-        />
-      </motion.div>
-
     </section>
   );
 }

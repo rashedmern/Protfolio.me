@@ -1,4 +1,16 @@
 import "./globals.css";
+import { DM_Serif_Display, Inter } from "next/font/google";
+
+const dmSerif = DM_Serif_Display({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-display",
+});
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-sans",
+});
 
 export default function RootLayout({
   children,
@@ -17,7 +29,11 @@ export default function RootLayout({
         />
       </head>
 
-      <body>{children}</body>
+      <body
+        className={`${inter.variable} ${dmSerif.variable}`}
+      >
+        {children}
+      </body>
     </html>
   );
 }
