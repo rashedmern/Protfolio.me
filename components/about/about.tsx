@@ -86,11 +86,11 @@ export default function About() {
           >
             Get to{" "}
             <span
-              className="
+               className="
                 bg-gradient-to-r
-                from-[#ac722a]
-                via-[#c7b5ed]
-                to-[#82b5ff]
+                from-orange-300
+                via-white
+                to-orange-400
                 bg-clip-text
                 text-transparent
               "

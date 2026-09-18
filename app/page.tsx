@@ -3,6 +3,10 @@ import Navbar from "@/components/navbar/navbar";
 import Cursor from "@/components/cursor/cursor";
 import Hero from "@/components/Hero/hero";
 import About from "@/components/about/about";
+import Experience from "@/components/experience/experience";
+import Skills from "@/components/skills/skills";
+import Projects from "@/components/projects/projects";
+import Contact from "@/components/contact/contact";
 
 export default function Home() {
   return (
@@ -12,6 +16,10 @@ export default function Home() {
       <Intro />
       <Hero />
       <About />
+      <Experience />
+      <Skills />
+      <Projects />
+      <Contact />
     </main>
   );
 }

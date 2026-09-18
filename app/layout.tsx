@@ -1,5 +1,6 @@
 import "./globals.css";
 import { DM_Serif_Display, Inter } from "next/font/google";
+import SmoothScroll from "@/components/animations/SmoothScroll";
 
 const dmSerif = DM_Serif_Display({
   subsets: ["latin"],
@@ -32,6 +33,9 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${dmSerif.variable}`}
       >
+        {/* Global Smooth Scroll */}
+        <SmoothScroll />
+
         {children}
       </body>
     </html>
