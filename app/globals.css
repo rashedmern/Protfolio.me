@@ -1,258 +1,115 @@
 @import "tailwindcss";
 
-/* =========================================================
-   ROOT
-========================================================= */
+@custom-variant dark (&:where(.dark, .dark *));
 
-:root {
-  --background: #030303;
-  --foreground: #f5f5f5;
+:root, [data-theme="light"] {
+  --bg-primary: #fffefa;
+  --bg-secondary: #f8f6f2;
+  --bg-tertiary: #efeae3;
+  --text-primary: #2a2420;
+  --text-secondary: #4a443e;
+  --text-tertiary: #756d66;
+  --border-color: #e8e3dc;
+  --accent: #a47864;
+  --accent-hover: #8b6652;
+  --accent-light: #f4ede8;
+  --header-bg: rgba(255, 254, 250, 0.95);
+  --header-border: #e8e3dc;
+  --header-shadow: 0 1px 3px rgba(42, 36, 32, 0.06);
+  --header-height: 70px;
+  --container-max-width: 1200px;
+}
 
-  --orange: #ff7a18;
-  --teal: #14b8a6;
+html.dark, [data-theme="dark"] {
+  --bg-primary: #1c1a17;
+  --bg-secondary: #252320;
+  --bg-tertiary: #2f2c28;
+  --text-primary: #f8f6f2;
+  --text-secondary: #dcd7d1;
+  --text-tertiary: #a8a29b;
+  --border-color: #3a3633;
+  --accent: #c4977f;
+  --accent-hover: #d4a893;
+  --accent-light: #3a342f;
+  --header-bg: rgba(28, 26, 23, 0.95);
+  --header-border: #3a3633;
+  --header-shadow: 0 1px 0 rgba(255, 255, 255, 0.06);
 }
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: background-color 200ms ease, color 200ms ease, border-color 200ms ease;
 }
 
 html {
   scroll-behavior: smooth;
-}
-
-html,
-body {
-  width: 100%;
-  min-height: 100%;
-}
-
-body {
-  margin: 0;
-  overflow-x: hidden;
-
-  color: var(--foreground);
-
-  font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
-
+  scroll-padding-top: var(--header-height);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-
-  /* =====================================================
-     ULTRA DARK CINEMATIC BACKGROUND
-  ===================================================== */
-
-  background:
-    /* Very subtle orange ambient glow */
-    radial-gradient(
-      ellipse 65% 50% at 10% 58%,
-      rgba(170, 60, 15, 0.075),
-      transparent 70%
-    ),
-
-    /* Very subtle teal ambient glow */
-    radial-gradient(
-      ellipse 55% 50% at 92% 72%,
-      rgba(8, 105, 98, 0.035),
-      transparent 72%
-    ),
-
-    /* Tiny warm center glow */
-    radial-gradient(
-      ellipse 70% 60% at 50% 50%,
-      rgba(255, 90, 20, 0.012),
-      transparent 75%
-    ),
-
-    /* Almost black base */
-    #030303;
 }
 
-
-/* =========================================================
-   SUBTLE GRID
-========================================================= */
-
-body::before {
-  content: "";
-
-  position: fixed;
-  inset: 0;
-
-  z-index: 0;
-
-  pointer-events: none;
-
-  background-image:
-    linear-gradient(
-      rgba(255, 255, 255, 0.014) 1px,
-      transparent 1px
-    ),
-    linear-gradient(
-      90deg,
-      rgba(255, 255, 255, 0.014) 1px,
-      transparent 1px
-    );
-
-  background-size: 72px 72px;
-
-  mask-image:
-    radial-gradient(
-      ellipse at center,
-      black 15%,
-      rgba(0, 0, 0, 0.75) 55%,
-      transparent 100%
-    );
-
-  -webkit-mask-image:
-    radial-gradient(
-      ellipse at center,
-      black 15%,
-      rgba(0, 0, 0, 0.75) 55%,
-      transparent 100%
-    );
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.6;
+  min-height: 100vh;
 }
 
-
-/* =========================================================
-   GRAIN
-========================================================= */
-
-body::after {
-  content: "";
-
-  position: fixed;
-  inset: -50%;
-
-  z-index: 1;
-
-  pointer-events: none;
-
-  opacity: 0.035;
-
-  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180' viewBox='0 0 180 180'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='.7'/%3E%3C/svg%3E");
-
-  background-repeat: repeat;
+/* Container */
+.site-container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
 }
 
+@media (min-width: 768px) {
+  .site-container {
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
+  }
+}
 
-/* =========================================================
-   CONTENT
-========================================================= */
-
-main,
-header,
-nav,
-section,
-footer {
+/* Nav items */
+.nav-link {
   position: relative;
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  transition: color 150ms ease;
+  letter-spacing: -0.01em;
+  padding: 0.4rem 0;
+  text-decoration: none;
+  display: inline-block;
 }
 
-
-/* =========================================================
-   CUSTOM CURSOR
-========================================================= */
-
-@media (pointer: fine) {
-  html,
-  body,
-  a,
-  button {
-    cursor: none;
-  }
+.nav-link:hover {
+  color: var(--accent);
 }
 
-@media (pointer: coarse) {
-  html,
-  body,
-  a,
-  button {
-    cursor: auto;
-  }
-}
-
-
-/* =========================================================
-   TEXT SELECTION
-========================================================= */
-
-::selection {
-  background: rgba(255, 122, 24, 0.2);
-  color: #ffffff;
-}
-
-
-/* =========================================================
-   SCROLLBAR
-========================================================= */
-
-::-webkit-scrollbar {
-  width: 5px;
-}
-
-::-webkit-scrollbar-track {
-  background: #030303;
-}
-
-::-webkit-scrollbar-thumb {
-  background: rgba(255, 122, 24, 0.25);
-  border-radius: 999px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 122, 24, 0.45);
-}
-
-
-/* =========================================================
-   MOBILE
-========================================================= */
-
-@media (max-width: 768px) {
-  body::before {
-    background-size: 55px 55px;
-  }
-
-  body::after {
-    opacity: 0.03;
-  }
-}
-/* =========================================
-   HERO → ABOUT MOVING LIGHT
-   ========================================= */
-
-.about-line-beam {
+.nav-link::after {
+  content: "";
   position: absolute;
-  top: 0;
-  left: -240px;
-
-  width: 240px;
-  height: 1px;
-
-  background: linear-gradient(
-    90deg,
-    transparent 0%,
-    rgba(251, 146, 60, 0.15) 20%,
-    rgba(251, 146, 60, 0.9) 50%,
-    rgba(251, 146, 60, 0.15) 80%,
-    transparent 100%
-  );
-
-  box-shadow:
-    0 0 6px rgba(251, 146, 60, 0.8),
-    0 0 14px rgba(251, 146, 60, 0.45);
-
-  animation: aboutLineMove 3s linear infinite;
+  left: 0;
+  bottom: -2px;
+  height: 2px;
+  width: 0;
+  background-color: var(--accent);
+  border-radius: 2px;
+  transition: width 220ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-@keyframes aboutLineMove {
-  from {
-    left: -240px;
-  }
+.nav-link:hover::after,
+.nav-link.active::after {
+  width: 100%;
+}
 
-  to {
-    left: 100%;
-  }
+.nav-link.active {
+  color: var(--accent);
+  font-weight: 700;
 }
