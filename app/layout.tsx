@@ -52,7 +52,10 @@ export const metadata: Metadata = {
   category: "technology",
   manifest: "/manifest.webmanifest",
   icons: {
-    icon: "/icon.png",
+    icon: [
+      { url: "/icon.png", type: "image/png" },
+      { url: "/favicon.ico", type: "image/x-icon" },
+    ],
     shortcut: "/icon.png",
     apple: "/icon.png",
   },
