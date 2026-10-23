@@ -1,55 +1,97 @@
+import React from "react";
+import Navbar from "@/components/Navbar/Navbar";
+import BackgroundDecorations from "@/components/Decorations/BackgroundDecorations";
 import Hero from "@/components/Hero/Hero";
+import SectionDivider from "@/components/Dividers/SectionDivider";
+import Services from "@/components/Services/Services";
+import Testimonials from "@/components/Testimonials/Testimonials";
+import Projects from "@/components/Projects/Projects";
+import Products from "@/components/Products/Products";
+import Skills from "@/components/Skills/Skills";
+import Experience from "@/components/Experience/Experience";
+import Blog from "@/components/Blog/Blog";
+import Certifications from "@/components/Certifications/Certifications";
+import FAQ from "@/components/FAQ/FAQ";
+import Contact from "@/components/Contact/Contact";
+import Footer from "@/components/Footer/Footer";
 
 export default function Home() {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        "@id": "https://rashed.live/#person",
+        name: "Rashed Molla Antor",
+        alternateName: "Rashed",
+        jobTitle: "Full-Stack Software Engineer",
+        url: "https://rashed.live",
+        image: "https://rashed.live/profile.jpg",
+        sameAs: [
+          "https://github.com/rashedxali",
+          "https://linkedin.com/in/rashedxali",
+          "https://leetcode.com/u/rashedxali",
+          "https://codeforces.com/profile/rashedxali",
+          "https://medium.com/@rashedxali",
+          "https://www.youtube.com/@rashedxali",
+        ],
+        worksFor: {
+          "@type": "Organization",
+          name: "Archiom",
+        },
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://rashed.live/#website",
+        url: "https://rashed.live",
+        name: "Rashed Molla Antor | Full Stack Software Engineer",
+        publisher: {
+          "@id": "https://rashed.live/#person",
+        },
+      },
+    ],
+  };
+
   return (
-    <main className="flex-1 flex flex-col items-center">
-      {/* Section 2: Hero Section */}
-      <Hero
-        name="Rashed Molla Antor"
-        role="Junior Software Engineer"
-        companyName="archiom.io"
-        companyUrl="https://archiom.io/"
-        githubUrl="https://github.com/rashedmern"
-        linkedinUrl="https://linkedin.com/"
-        email="[EMAIL_ADDRESS]"
-        resumeUrl="#resume"
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
 
-      {/* Anchor sections for upcoming phases */}
-      <section id="experience" className="py-24 w-full border-t border-[var(--border-color)] bg-[var(--bg-secondary)]">
-        <div className="site-container text-center">
-          <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-2">Experience</h2>
-          <p className="text-[var(--text-secondary)]">Upcoming Section</p>
-        </div>
-      </section>
+      <main className="relative min-h-screen overflow-hidden z-10 pt-14 min-[1440px]:pt-10 pb-20 lg:pb-10 canvas-surface">
+        {/* Background Coffee Mug, Phone Graphic, and Recent Searches */}
+        <BackgroundDecorations />
 
-      <section id="skills" className="py-24 w-full border-t border-[var(--border-color)]">
-        <div className="site-container text-center">
-          <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-2">Skills</h2>
-          <p className="text-[var(--text-secondary)]">Upcoming Section</p>
-        </div>
-      </section>
+        {/* Pinned Sticky Navigation Bar */}
+        <Navbar />
 
-      <section id="projects" className="py-24 w-full border-t border-[var(--border-color)] bg-[var(--bg-secondary)]">
-        <div className="site-container text-center">
-          <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-2">Projects</h2>
-          <p className="text-[var(--text-secondary)]">Upcoming Section</p>
-        </div>
-      </section>
+        {/* Sections */}
+        <Hero />
+        <SectionDivider />
+        <Services />
+        <SectionDivider />
+        <Testimonials />
+        <SectionDivider />
+        <Projects />
+        <SectionDivider />
+        <Products />
+        <SectionDivider />
+        <Skills />
+        <SectionDivider />
+        <Experience />
+        <SectionDivider />
+        <Blog />
+        <SectionDivider />
+        <Certifications />
+        <SectionDivider />
+        <FAQ />
+        <SectionDivider />
+        <Contact />
 
-      <section id="education" className="py-24 w-full border-t border-[var(--border-color)]">
-        <div className="site-container text-center">
-          <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-2">Education</h2>
-          <p className="text-[var(--text-secondary)]">Upcoming Section</p>
-        </div>
-      </section>
-
-      <section id="contact" className="py-24 w-full border-t border-[var(--border-color)] bg-[var(--bg-secondary)]">
-        <div className="site-container text-center">
-          <h2 className="text-3xl font-bold text-[var(--text-primary)] mb-2">Contact</h2>
-          <p className="text-[var(--text-secondary)]">Upcoming Section</p>
-        </div>
-      </section>
-    </main>
+        {/* Footer */}
+        <Footer />
+      </main>
+    </>
   );
 }
