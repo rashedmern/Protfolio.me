@@ -21,7 +21,12 @@ export default function Navbar() {
     e.preventDefault();
     const target = document.querySelector(href);
     if (target) {
-      target.scrollIntoView({ behavior: "smooth" });
+      const globalLenis = (window as unknown as { __lenis?: { scrollTo: (target: HTMLElement, options?: object) => void } }).__lenis;
+      if (globalLenis) {
+        globalLenis.scrollTo(target as HTMLElement, { offset: -75, duration: 1.4 });
+      } else {
+        target.scrollIntoView({ behavior: "smooth" });
+      }
       history.pushState(null, "", href);
     }
   };

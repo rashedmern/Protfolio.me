@@ -1,6 +1,8 @@
 import type { Metadata, Viewport } from "next";
 import { Patrick_Hand, Kalam, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import "lenis/dist/lenis.css";
+import SmoothScroll from "@/components/SmoothScroll/SmoothScroll";
 
 const patrickHand = Patrick_Hand({
   weight: "400",
@@ -97,6 +99,7 @@ export default function RootLayout({
       className={`${patrickHand.variable} ${kalam.variable} ${geistMono.variable}`}
     >
       <body className="min-h-screen text-ink antialiased selection:bg-primary-200 selection:text-ink">
+        <SmoothScroll />
         {children}
       </body>
     </html>
