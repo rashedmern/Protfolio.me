@@ -33,6 +33,18 @@ export default function Contact() {
   const handleMessageSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     setFormState((prev) => ({ ...prev, status: "loading" }));
+
+    // Prepare mailto link with User Name and Message
+    const subject = encodeURIComponent(
+      formState.name ? `New Message from ${formState.name}` : "Portfolio Inquiry"
+    );
+    const body = encodeURIComponent(
+      `Hi Rashed,\n\nName: ${formState.name}\nEmail: ${formState.email}\n\nMessage:\n${formState.message}\n`
+    );
+
+    // Direct user to default mail client (Gmail/Outlook/Apple Mail)
+    window.location.href = `mailto:rashedmolla541@gmail.com?subject=${subject}&body=${body}`;
+
     setTimeout(() => {
       setFormState({
         name: "",
@@ -40,7 +52,7 @@ export default function Contact() {
         message: "",
         status: "success",
       });
-    }, 1200);
+    }, 1000);
   };
 
   const handleSendMoney = () => {
@@ -192,9 +204,11 @@ export default function Contact() {
                   <div className="relative group w-36 md:w-40 transform -rotate-1 hover:rotate-0 transition-transform duration-300 hover:z-30">
                     <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-primary-600 shadow z-30" />
                     <div className="bg-paper p-3 py-6 shadow-sketch-sm border-b border-primary-200 text-center min-h-[110px] flex flex-col justify-center">
-                      <Link
-                        href="mailto:rashedmolla541@gmail.com"
-                        className="group/mail-link flex flex-col items-center gap-1"
+                      <a
+                        href="https://mail.google.com/mail/?view=cm&fs=1&to=rashedmolla541@gmail.com&su=Portfolio%20Inquiry%20from%20Website"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group/mail-link flex flex-col items-center gap-1 cursor-pointer"
                       >
                         <svg
                           className="w-8 h-8 text-ink transition-colors group-hover/mail-link:text-primary-600"
@@ -215,7 +229,7 @@ export default function Contact() {
                         <span className="block font-hand text-xs text-ink-muted break-all">
                           rashedmolla541@gmail.com
                         </span>
-                      </Link>
+                      </a>
                     </div>
                   </div>
                 </div>
