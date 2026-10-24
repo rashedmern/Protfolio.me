@@ -194,17 +194,17 @@ export default function Hero() {
           <div className="relative animate-float-paper">
             {/* Minimalist Masking Tape at Top */}
             <div
-              className="absolute -top-3 left-1/2 -translate-x-1/2 w-24 h-6 bg-paper/90 border border-primary-300 shadow-sm z-30 rotate-[-1deg] backdrop-blur-[1px]"
+              className="absolute -top-3 left-1/2 -translate-x-1/2 w-24 h-6 bg-paper/90 border border-primary-300 shadow-sm z-30 rotate-0 md:rotate-[-1deg] backdrop-blur-[1px]"
               aria-hidden="true"
             />
 
             {/* Availability Badge */}
-            <div className="absolute -top-3 -right-4 sm:-right-8 z-30 bg-primary-200 px-3 py-1 font-hand text-xs text-ink shadow-md border border-primary-400 rotate-[6deg]">
+            <div className="absolute -top-3 -right-4 sm:-right-8 z-30 bg-primary-200 px-3 py-1 font-hand text-xs text-ink shadow-md border border-primary-400 rotate-0 md:rotate-[6deg]">
               taking new projects ✦
             </div>
 
             {/* Card Body */}
-            <div className="hero-id-badge relative bg-paper-alt rounded-2xl shadow-paper border-2 border-primary-300 overflow-hidden w-56 sm:w-64 rotate-[1.5deg] hover:rotate-0 hover:shadow-paper-lift transition-all duration-500">
+            <div className="hero-id-badge relative bg-paper-alt rounded-2xl shadow-paper border-2 border-primary-300 overflow-hidden w-56 sm:w-64 rotate-0 md:rotate-[1.5deg] hover:rotate-0 hover:shadow-paper-lift transition-all duration-500">
               <div
                 className="px-4 py-2.5 flex items-center justify-between"
                 style={{ background: "linear-gradient(to right, var(--color-primary-700), var(--color-primary-500))" }}

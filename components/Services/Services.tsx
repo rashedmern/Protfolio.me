@@ -7,7 +7,7 @@ export default function Services() {
       number: "01",
       title: "Full-Stack Web Applications",
       description: "End-to-end scalable web apps with React, Next.js & Node.js. Engineered for high performance, reliability, and smooth user experiences.",
-      cardRotate: "-rotate-[1deg]",
+      cardRotate: "rotate-0 md:-rotate-[1deg]",
       pinBg: "bg-primary-500",
       tapeBg: "bg-primary-100 border-primary-200",
       cardBg: "bg-paper border-primary-200",
@@ -20,7 +20,7 @@ export default function Services() {
       number: "02",
       title: "Modern Frontend Engineering",
       description: "Pixel-perfect, ultra-responsive UIs crafted with modern frameworks. Fast render cycles, fluid micro-interactions, and accessible designs.",
-      cardRotate: "rotate-[1.5deg]",
+      cardRotate: "rotate-0 md:rotate-[1.5deg]",
       pinBg: "bg-primary-400",
       tapeBg: "bg-primary-50 border-primary-200",
       cardBg: "bg-paper-alt border-primary-200",
@@ -33,7 +33,7 @@ export default function Services() {
       number: "03",
       title: "Backend Systems & REST APIs",
       description: "High-throughput server architectures, RESTful APIs, and optimized databases (SQL/NoSQL) built to handle real traffic without bottlenecks.",
-      cardRotate: "-rotate-[0.5deg]",
+      cardRotate: "rotate-0 md:-rotate-[0.5deg]",
       pinBg: "bg-neutral-500",
       tapeBg: "bg-neutral-100 border-neutral-200",
       cardBg: "bg-paper border-neutral-300",
@@ -46,7 +46,7 @@ export default function Services() {
       number: "04",
       title: "SaaS & MVP Development",
       description: "Taking your product idea from napkin sketch to live production fast. Clean architecture that is maintainable and ready to scale.",
-      cardRotate: "rotate-[1deg]",
+      cardRotate: "rotate-0 md:rotate-[1deg]",
       pinBg: "bg-primary-600",
       tapeBg: "bg-primary-100 border-primary-300",
       cardBg: "bg-paper-tint border-primary-300",
@@ -59,7 +59,7 @@ export default function Services() {
       number: "05",
       title: "AI Automation & Workflows",
       description: "Integrating intelligent LLM APIs, webhooks, and automation pipelines to streamline workflows and eliminate repetitive manual tasks.",
-      cardRotate: "-rotate-[1.5deg]",
+      cardRotate: "rotate-0 md:-rotate-[1.5deg]",
       pinBg: "bg-primary-300",
       tapeBg: "bg-primary-100 border-primary-200",
       cardBg: "bg-paper-alt border-primary-100",
@@ -72,7 +72,7 @@ export default function Services() {
       number: "06",
       title: "Architecture & Code Audits",
       description: "Deep codebase refactoring, bottleneck elimination, database indexing, and scaling guidance to turn legacy chaos into clean maintainable software.",
-      cardRotate: "rotate-[0.5deg]",
+      cardRotate: "rotate-0 md:rotate-[0.5deg]",
       pinBg: "bg-neutral-400",
       tapeBg: "bg-neutral-100 border-neutral-200",
       cardBg: "bg-paper border-neutral-200",
@@ -86,7 +86,7 @@ export default function Services() {
     <section id="services" className="relative w-full max-w-6xl mx-auto px-4 sm:px-6 py-10 md:py-14">
       {/* Header with folder tab */}
       <header className="relative z-10 flex flex-col items-center mb-10 md:mb-12 text-center">
-        <div className="relative -rotate-[0.5deg] hover:rotate-0 transition-transform duration-500">
+        <div className="relative rotate-0 md:-rotate-[0.5deg] hover:rotate-0 transition-transform duration-500">
           <div
             className="absolute -top-2 left-1/2 -translate-x-1/2 w-20 h-5 bg-paper rotate-1 border border-primary-200 shadow-sm z-20"
             aria-hidden="true"
@@ -109,7 +109,7 @@ export default function Services() {
           </div>
         </div>
 
-        <p className="max-w-xl mx-auto font-hand text-ink-muted text-sm md:text-base bg-paper border border-primary-200 px-4 py-1.5 shadow-paper mt-3 rotate-[-1.5deg] hover:rotate-0 transition-transform duration-300">
+        <p className="max-w-xl mx-auto font-hand text-ink-muted text-sm md:text-base bg-paper border border-primary-200 px-4 py-1.5 shadow-paper mt-3 rotate-0 md:rotate-[-1.5deg] hover:rotate-0 transition-transform duration-300">
           Engineering robust software solutions for founders, startups, and growing teams. From crafting intuitive frontend interfaces to architecting high-performance backends and smart automations — here is how I deliver impact.
         </p>
       </header>

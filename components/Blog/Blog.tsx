@@ -18,7 +18,7 @@ const POSTS: BlogPost[] = [
     imageUrl:
       "https://miro.medium.com/v2/resize:fit:720/format:webp/1*U8jkvKovJO279ZB9Yk0O2Q.png",
     link: "https://medium.com/@rashedxali/how-to-get-a-free-ai-coding-assistant-in-vs-code-like-copilot-but-free-7cab66422796",
-    tilt: "rotate-1",
+    tilt: "rotate-0 md:rotate-1",
     tapeTilt: "-rotate-2",
   },
   {
@@ -27,7 +27,7 @@ const POSTS: BlogPost[] = [
     imageUrl:
       "https://miro.medium.com/v2/resize:fit:720/format:webp/1*IhvlyY7ZSsgjo-HEEDOmlg.png",
     link: "https://medium.com/@rashedxali/how-a-simple-project-structure-guide-reduced-chaos-in-our-next-js-codebase-1c4dcba2d601",
-    tilt: "-rotate-[1.5deg]",
+    tilt: "rotate-0 md:-rotate-[1.5deg]",
     tapeTilt: "rotate-1",
   },
   {
@@ -36,7 +36,7 @@ const POSTS: BlogPost[] = [
     imageUrl:
       "https://miro.medium.com/v2/resize:fit:720/format:webp/1*StslEdY_tZymlsnlLFVPnA.png",
     link: "https://medium.com/@rashedxali/how-to-bypass-vercel-upload-limits-in-next-js-using-use-client-for-client-side-file-uploads-b045ed3b65a5",
-    tilt: "rotate-[1.5deg]",
+    tilt: "rotate-0 md:rotate-[1.5deg]",
     tapeTilt: "-rotate-1",
   },
 ];
@@ -51,7 +51,7 @@ export default function Blog() {
             <div className="w-px h-3 md:h-4 bg-primary-400/45" />
             <div className="w-px h-3 md:h-4 bg-primary-400/45" />
           </div>
-          <div className="relative -rotate-[0.5deg] hover:rotate-0 transition-transform duration-500">
+          <div className="relative rotate-0 md:-rotate-[0.5deg] hover:rotate-0 transition-transform duration-500">
             <div
               className="absolute -top-2 left-1/2 -translate-x-1/2 w-20 h-5 bg-paper rotate-1 border border-primary-200 shadow-sm z-20"
               aria-hidden="true"
@@ -73,7 +73,7 @@ export default function Blog() {
               </span>
             </div>
           </div>
-          <div className="relative mt-2 md:mt-3 rotate-[-1.5deg] hover:rotate-0 transition-transform duration-300">
+          <div className="relative mt-2 md:mt-3 rotate-0 md:rotate-[-1.5deg] hover:rotate-0 transition-transform duration-300">
             <p className="font-hand text-ink-muted text-sm md:text-base bg-paper border border-primary-200 px-4 py-1.5 shadow-paper">
               brain dumps worth publishing (maybe)
             </p>

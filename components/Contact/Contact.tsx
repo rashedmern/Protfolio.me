@@ -107,7 +107,7 @@ export default function Contact() {
 
       {/* Main Container with perforated receipt tear top */}
       <div
-        className="bg-paper-alt p-6 md:p-12 shadow-xl rotate-1 border-t-4 border-neutral-200"
+        className="bg-paper-alt p-6 md:p-12 shadow-xl rotate-0 md:rotate-1 border-t-4 border-neutral-200"
         style={{
           clipPath:
             "polygon(0% 10px, 5% 0px, 10% 12px, 15% 0px, 20% 10px, 25% 0px, 30% 12px, 35% 0px, 40% 10px, 45% 0px, 50% 12px, 55% 0px, 60% 10px, 65% 0px, 70% 12px, 75% 0px, 80% 10px, 85% 0px, 90% 12px, 95% 0px, 100% 10px, 100% 100%, 0% 100%)",
@@ -131,7 +131,7 @@ export default function Contact() {
                 />
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-0 items-start justify-items-center relative z-10">
                   {/* Pin 1: Spawn Point */}
-                  <div className="relative group w-32 md:w-36 transform -rotate-3 hover:rotate-0 transition-transform duration-300 hover:z-30">
+                  <div className="relative group w-32 md:w-36 transform rotate-0 md:-rotate-3 hover:rotate-0 transition-transform duration-300 hover:z-30">
                     <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-primary-600 shadow z-30" />
                     <div className="bg-paper-alt p-2 pb-6 shadow-md border border-neutral-200 text-center">
                       <div className="bg-neutral-100 h-10 mb-2 flex items-center justify-center">
@@ -160,7 +160,7 @@ export default function Contact() {
                   </div>
 
                   {/* Pin 2: Hotline */}
-                  <div className="relative group md:-translate-x-4 w-36 md:w-40 transform rotate-2 hover:rotate-0 transition-transform duration-300 hover:z-30">
+                  <div className="relative group md:-translate-x-4 w-36 md:w-40 transform rotate-0 md:rotate-2 hover:rotate-0 transition-transform duration-300 hover:z-30">
                     <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-12 h-6 bg-paper-alt/40 backdrop-blur-sm border border-ink/5 rotate-[-15deg] z-20 shadow-sm pointer-events-none" />
                     <div className="bg-paper p-3 py-6 shadow-sketch-sm border-b border-primary-200 text-center min-h-[110px] flex flex-col justify-center relative overflow-hidden">
                       <Link
@@ -201,7 +201,7 @@ export default function Contact() {
                   </div>
 
                   {/* Pin 3: Email */}
-                  <div className="relative group w-36 md:w-40 transform -rotate-1 hover:rotate-0 transition-transform duration-300 hover:z-30">
+                  <div className="relative group w-36 md:w-40 transform rotate-0 md:-rotate-1 hover:rotate-0 transition-transform duration-300 hover:z-30">
                     <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-primary-600 shadow z-30" />
                     <div className="bg-paper p-3 py-6 shadow-sketch-sm border-b border-primary-200 text-center min-h-[110px] flex flex-col justify-center">
                       <a

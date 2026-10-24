@@ -54,7 +54,7 @@ const TESTIMONIALS: Testimonial[] = [
   },
 ];
 
-const CARD_ROTATES = ["-rotate-1", "rotate-[1.5deg]", "-rotate-[0.5deg]", "rotate-1"];
+const CARD_ROTATES = ["rotate-0 md:-rotate-1", "rotate-0 md:rotate-[1.5deg]", "rotate-0 md:-rotate-[0.5deg]", "rotate-0 md:rotate-1"];
 const TAPE_ROTATES = ["-rotate-1", "rotate-1", "-rotate-[0.5deg]", "rotate-[0.5deg]"];
 
 export default function Testimonials() {
@@ -95,7 +95,7 @@ export default function Testimonials() {
     <section id="testimonials" className="relative w-full max-w-6xl mx-auto px-4 sm:px-6 py-10 md:py-14">
       {/* Header */}
       <header className="relative mb-6 md:mb-8 text-center">
-        <div className="inline-block relative -rotate-[0.5deg] hover:rotate-0 transition-transform duration-500">
+        <div className="inline-block relative rotate-0 md:-rotate-[0.5deg] hover:rotate-0 transition-transform duration-500">
           <div className="bg-gradient-to-br from-[var(--paper-bg)] to-primary-50 border-2 border-primary-300/60 px-8 md:px-12 pt-4 pb-5 shadow-paper relative">
             <h2 className="font-display font-bold text-2xl md:text-3xl lg:text-4xl text-ink tracking-wide relative inline-block">
               What Clients Say

@@ -18,7 +18,7 @@ const EXPERIENCES: ExperienceItem[] = [
     description:
       "Working on real-world web applications and internal tools. Collaborating with senior engineers to implement responsive UI features, integrate clean REST APIs, and optimize frontend performance.",
     highlight: "Learning fast, shipping consistently, and turning complex design requirements into solid code.",
-    tilt: "-rotate-[1deg] md:translate-x-2",
+    tilt: "rotate-0 md:-rotate-[1deg] md:translate-x-2",
   },
   {
     company: "Independent Projects & Freelance",
@@ -27,7 +27,7 @@ const EXPERIENCES: ExperienceItem[] = [
     description:
       "Engineering full-stack web products (like SkillMatch, MAX THERMAL, and FAIZA & CO) from zero to production. Building responsive frontends with Next.js & React and crafting clean server architectures.",
     highlight: "Delivering production-ready solutions with pixel precision and zero fluff.",
-    tilt: "rotate-[1.5deg] md:-translate-x-1",
+    tilt: "rotate-0 md:rotate-[1.5deg] md:-translate-x-1",
   },
 ];
 
@@ -37,7 +37,7 @@ export default function Experience() {
       {/* Header */}
       <header className="relative z-10 text-center mb-10 md:mb-14">
         <div className="inline-block reveal-down">
-          <div className="relative -rotate-[0.5deg] hover:rotate-0 transition-transform duration-500">
+          <div className="relative rotate-0 md:-rotate-[0.5deg] hover:rotate-0 transition-transform duration-500">
             {/* Paper clips */}
             <div className="absolute -top-1 right-4 md:right-8 z-20 opacity-70" aria-hidden="true">
               <div className="w-3 h-12 border-[3px] border-neutral-400 rounded-full rotate-12" />
@@ -63,7 +63,7 @@ export default function Experience() {
             </div>
           </div>
           <p
-            className="font-hand text-ink-muted text-sm md:text-base mt-4 inline-block bg-paper border border-primary-200 px-4 py-1.5 shadow-sm rotate-[1.5deg] hover:rotate-0 reveal-fade"
+            className="font-hand text-ink-muted text-sm md:text-base mt-4 inline-block bg-paper border border-primary-200 px-4 py-1.5 shadow-sm rotate-0 md:rotate-[1.5deg] hover:rotate-0 reveal-fade"
             style={{ animationDelay: "200ms" }}
           >
             official-ish records from the grind

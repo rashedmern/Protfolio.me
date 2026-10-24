@@ -123,14 +123,14 @@ const EMOTIONAL_SKILLS = [
 ];
 
 const CARD_TILT = [
-  "-rotate-[0.5deg]",
-  "rotate-[0.5deg]",
-  "-rotate-[1deg]",
-  "rotate-[1deg]",
-  "-rotate-[0.7deg]",
-  "rotate-[0.8deg]",
-  "-rotate-[0.5deg]",
-  "rotate-[0.6deg]",
+  "rotate-0 md:-rotate-[0.5deg]",
+  "rotate-0 md:rotate-[0.5deg]",
+  "rotate-0 md:-rotate-[1deg]",
+  "rotate-0 md:rotate-[1deg]",
+  "rotate-0 md:-rotate-[0.7deg]",
+  "rotate-0 md:rotate-[0.8deg]",
+  "rotate-0 md:-rotate-[0.5deg]",
+  "rotate-0 md:rotate-[0.6deg]",
 ];
 
 export default function Skills() {
@@ -158,7 +158,7 @@ export default function Skills() {
       {/* Header with 4 metal bolts */}
       <header className="relative z-10 text-center mb-10 md:mb-14">
         <div className="inline-block relative reveal-down">
-          <div className="relative -rotate-[0.5deg] hover:rotate-0 transition-transform duration-500">
+          <div className="relative rotate-0 md:-rotate-[0.5deg] hover:rotate-0 transition-transform duration-500">
             <div
               className="absolute -top-3 left-1/2 -translate-x-1/2 w-24 h-6 bg-paper rotate-1 border border-primary-200 shadow-sm z-20"
               aria-hidden="true"
@@ -183,7 +183,7 @@ export default function Skills() {
               </h2>
             </div>
           </div>
-          <p className="font-hand text-ink-muted text-sm md:text-base mt-4 inline-block bg-paper border border-primary-200 px-4 py-1.5 shadow-sm rotate-[1.5deg] hover:rotate-0">
+          <p className="font-hand text-ink-muted text-sm md:text-base mt-4 inline-block bg-paper border border-primary-200 px-4 py-1.5 shadow-sm rotate-0 md:rotate-[1.5deg] hover:rotate-0">
             everything i keep within arm&apos;s reach
           </p>
         </div>
@@ -227,7 +227,7 @@ export default function Skills() {
       </div>
 
       {/* Emotional Skills bonus sticky note */}
-      <div className="relative z-10 max-w-xl mx-auto rotate-1 hover:rotate-0 transition-transform duration-300">
+      <div className="relative z-10 max-w-xl mx-auto rotate-0 md:rotate-1 hover:rotate-0 transition-transform duration-300">
         <div className="bg-[var(--paper-bg)] text-ink border-2 border-primary-300/90 rounded-lg p-6 sm:p-7 shadow-paper relative overflow-hidden">
           <div
             className="absolute -top-2 left-1/2 -translate-x-1/2 w-24 h-5 bg-paper border border-primary-300 rotate-1 shadow-sm"

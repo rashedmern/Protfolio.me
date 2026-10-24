@@ -52,14 +52,14 @@ const FAQS: FAQItem[] = [
 ];
 
 const CARD_TILTS = [
-  "-rotate-[0.3deg]",
-  "rotate-[0.4deg]",
-  "-rotate-[0.5deg]",
-  "rotate-[0.3deg]",
-  "-rotate-[0.4deg]",
-  "rotate-[0.5deg]",
-  "-rotate-[0.3deg]",
-  "rotate-[0.4deg]",
+  "rotate-0 md:-rotate-[0.3deg]",
+  "rotate-0 md:rotate-[0.4deg]",
+  "rotate-0 md:-rotate-[0.5deg]",
+  "rotate-0 md:rotate-[0.3deg]",
+  "rotate-0 md:-rotate-[0.4deg]",
+  "rotate-0 md:rotate-[0.5deg]",
+  "rotate-0 md:-rotate-[0.3deg]",
+  "rotate-0 md:rotate-[0.4deg]",
 ];
 
 export default function FAQ() {
@@ -73,7 +73,7 @@ export default function FAQ() {
     <section id="faq" aria-labelledby="faq-heading" className="relative w-full max-w-4xl mx-auto px-4 sm:px-6 py-10 md:py-14">
       {/* Header */}
       <header className="relative z-10 flex flex-col items-center mb-10 md:mb-12 text-center">
-        <div className="relative -rotate-[0.5deg] hover:rotate-0 transition-transform duration-500">
+        <div className="relative rotate-0 md:-rotate-[0.5deg] hover:rotate-0 transition-transform duration-500">
           <div
             className="absolute -top-2 left-1/2 -translate-x-1/2 w-20 h-5 bg-paper rotate-1 border border-primary-200 shadow-sm z-20"
             aria-hidden="true"

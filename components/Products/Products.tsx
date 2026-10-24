@@ -10,7 +10,7 @@ export default function Products() {
             <div className="w-px h-3 md:h-4 bg-primary-400/45" />
             <div className="w-px h-3 md:h-4 bg-primary-400/45" />
           </div>
-          <div className="relative -rotate-[0.5deg] hover:rotate-0 transition-transform duration-500">
+          <div className="relative rotate-0 md:-rotate-[0.5deg] hover:rotate-0 transition-transform duration-500">
             <div
               className="absolute -top-2 left-1/2 -translate-x-1/2 w-20 h-5 bg-paper rotate-1 border border-primary-200 shadow-sm z-20"
               aria-hidden="true"
@@ -32,7 +32,7 @@ export default function Products() {
               </span>
             </div>
           </div>
-          <div className="relative mt-2 md:mt-3 rotate-[-1.5deg] hover:rotate-0 transition-transform duration-300">
+          <div className="relative mt-2 md:mt-3 rotate-0 md:rotate-[-1.5deg] hover:rotate-0 transition-transform duration-300">
             <p className="font-hand text-ink-muted text-sm md:text-base bg-paper border border-primary-200 px-4 py-1.5 shadow-paper">
               from napkin sketch to deployment — my own bets
             </p>
@@ -42,7 +42,7 @@ export default function Products() {
 
       {/* Coming Soon Showcase */}
       <div className="w-full max-w-3xl mx-auto mb-10 pt-8">
-        <div className="relative -rotate-[0.5deg] hover:rotate-0 transition-transform duration-300">
+        <div className="relative rotate-0 md:-rotate-[0.5deg] hover:rotate-0 transition-transform duration-300">
           {/* Top Tape */}
           <div
             className="absolute -top-4 left-1/2 -translate-x-1/2 w-32 h-7 bg-paper rotate-1 border border-primary-300 shadow-sm z-30"

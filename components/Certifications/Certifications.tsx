@@ -24,7 +24,7 @@ export default function Certifications() {
         {/* Section Header */}
         <header className="relative z-10 text-center mb-10 md:mb-12">
           <div className="inline-block reveal-down">
-            <div className="relative -rotate-[0.5deg] hover:rotate-0 transition-transform duration-500">
+            <div className="relative rotate-0 md:-rotate-[0.5deg] hover:rotate-0 transition-transform duration-500">
               <div
                 className="absolute -top-3 left-1/2 -translate-x-1/2 w-24 h-6 bg-paper rotate-1 border border-primary-200 shadow-sm z-20"
                 aria-hidden="true"
@@ -52,7 +52,7 @@ export default function Certifications() {
               </div>
             </div>
             <p
-              className="font-hand text-ink-muted text-sm md:text-base mt-4 inline-block bg-paper border border-primary-200 px-4 py-1.5 shadow-sm rotate-[1.5deg] hover:rotate-0 reveal-fade"
+              className="font-hand text-ink-muted text-sm md:text-base mt-4 inline-block bg-paper border border-primary-200 px-4 py-1.5 shadow-sm rotate-0 md:rotate-[1.5deg] hover:rotate-0 reveal-fade"
               style={{ animationDelay: "200ms" }}
             >
               proof i sat through things (and survived)
@@ -74,7 +74,7 @@ export default function Certifications() {
         <div className="max-w-xl mx-auto mb-8">
           {/* Degree - University of Asia Pacific */}
           <article
-            className="relative bg-paper-alt/95 border-2 border-primary-200 rounded-md shadow-paper -rotate-[1deg] hover:rotate-0 transition-all duration-300 reveal-up"
+            className="relative bg-paper-alt/95 border-2 border-primary-200 rounded-md shadow-paper rotate-0 md:-rotate-[1deg] hover:rotate-0 transition-all duration-300 reveal-up"
             style={{ animationDelay: "300ms" }}
           >
             <div className="absolute -top-2 left-1/2 -translate-x-1/2 w-20 h-5 bg-paper border border-primary-200 shadow-sm z-10 -rotate-1" aria-hidden="true" />
@@ -119,7 +119,7 @@ export default function Certifications() {
           </div>
 
           {/* Funny Reality Check Card */}
-          <div className="max-w-2xl mx-auto rotate-[-0.5deg] hover:rotate-0 transition-transform duration-300">
+          <div className="max-w-2xl mx-auto rotate-0 md:rotate-[-0.5deg] hover:rotate-0 transition-transform duration-300">
             <div className="relative bg-[var(--paper-bg)] border-2 border-primary-300 rounded-lg p-6 sm:p-8 shadow-paper text-center">
               {/* Tape */}
               <div
