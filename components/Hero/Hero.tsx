@@ -191,40 +191,20 @@ export default function Hero() {
           className="hero-reveal-scale order-1 lg:order-2 flex justify-center lg:justify-end"
           style={{ animationDelay: "300ms" }}
         >
-          <div className="relative animate-float-paper pt-8">
-            {/* Wall Pushpin (Green Dot) & Hanging Ribbon/Loop */}
-            <div className="absolute -top-12 left-1/2 -translate-x-1/2 flex flex-col items-center z-20 pointer-events-none">
-              {/* Green Dot (Pin Head stuck into the wall) */}
-              <div className="relative w-5 h-5 rounded-full bg-primary-600 border-2 border-primary-800 shadow-md flex items-center justify-center z-30">
-                {/* 3D highlight on pin head */}
-                <div className="w-1.5 h-1.5 rounded-full bg-white/40 absolute top-0.5 left-1" />
-              </div>
-
-              {/* Greenish Ribbon / Loop extending from pin through card hole */}
-              <div
-                className="w-3.5 h-14 bg-gradient-to-b from-primary-600 via-primary-500 to-primary-700 shadow-md -mt-2.5 rounded-full border border-primary-800/40 relative z-20 flex items-center justify-center overflow-hidden rotate-[6deg]"
-              >
-                {/* Ribbon fabric texture weave */}
-                <div
-                  className="absolute inset-0 opacity-25"
-                  style={{
-                    backgroundImage: "repeating-linear-gradient(45deg, #000 0, #000 1.5px, transparent 0, transparent 3px)",
-                  }}
-                />
-                <div className="w-0.5 h-full bg-primary-200/50" />
-              </div>
-            </div>
-
-            {/* ID Card Slot Punch Hole (Oval Ring) */}
-            <div className="absolute top-9 left-1/2 -translate-x-1/2 w-8 h-2.5 bg-neutral-900/90 rounded-full z-30 shadow-inner border border-neutral-500/50" />
+          <div className="relative animate-float-paper">
+            {/* Minimalist Masking Tape at Top */}
+            <div
+              className="absolute -top-3 left-1/2 -translate-x-1/2 w-24 h-6 bg-paper/90 border border-primary-300 shadow-sm z-30 rotate-[-1deg] backdrop-blur-[1px]"
+              aria-hidden="true"
+            />
 
             {/* Availability Badge */}
-            <div className="absolute top-6 -right-4 sm:-right-8 z-30 bg-primary-200 px-2.5 py-1 font-hand text-xs text-ink shadow-md border border-primary-400 rotate-[6deg]">
+            <div className="absolute -top-3 -right-4 sm:-right-8 z-30 bg-primary-200 px-3 py-1 font-hand text-xs text-ink shadow-md border border-primary-400 rotate-[6deg]">
               taking new projects ✦
             </div>
 
             {/* Card Body */}
-            <div className="hero-id-badge relative bg-paper-alt rounded-xl shadow-paper border-2 border-primary-200 overflow-hidden w-56 sm:w-64 rotate-[2deg] hover:rotate-0 hover:shadow-paper transition-all duration-500">
+            <div className="hero-id-badge relative bg-paper-alt rounded-2xl shadow-paper border-2 border-primary-300 overflow-hidden w-56 sm:w-64 rotate-[1.5deg] hover:rotate-0 hover:shadow-paper-lift transition-all duration-500">
               <div
                 className="px-4 py-2.5 flex items-center justify-between"
                 style={{ background: "linear-gradient(to right, var(--color-primary-700), var(--color-primary-500))" }}
