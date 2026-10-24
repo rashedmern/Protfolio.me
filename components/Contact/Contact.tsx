@@ -152,7 +152,7 @@ export default function Contact() {
                     <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-12 h-6 bg-paper-alt/40 backdrop-blur-sm border border-ink/5 rotate-[-15deg] z-20 shadow-sm pointer-events-none" />
                     <div className="bg-paper p-3 py-6 shadow-sketch-sm border-b border-primary-200 text-center min-h-[110px] flex flex-col justify-center relative overflow-hidden">
                       <Link
-                        href="https://wa.me/8801738313337"
+                        href="https://wa.me/8801575344516"
                         target="_blank"
                         rel="noopener noreferrer"
                         className="group/wa-link relative flex flex-col items-center gap-1"
@@ -182,7 +182,7 @@ export default function Contact() {
                           Hotline
                         </span>
                         <span className="block font-hand text-xs text-ink-muted">
-                          +880 1738 313337
+                          +880 1575 344516
                         </span>
                       </Link>
                     </div>
@@ -193,7 +193,7 @@ export default function Contact() {
                     <div className="absolute -top-3 left-1/2 -translate-x-1/2 w-3 h-3 rounded-full bg-primary-600 shadow z-30" />
                     <div className="bg-paper p-3 py-6 shadow-sketch-sm border-b border-primary-200 text-center min-h-[110px] flex flex-col justify-center">
                       <Link
-                        href="mailto:talk.rashed@gmail.com"
+                        href="mailto:rashedmolla541@gmail.com"
                         className="group/mail-link flex flex-col items-center gap-1"
                       >
                         <svg
@@ -213,7 +213,7 @@ export default function Contact() {
                           Drop a Message
                         </span>
                         <span className="block font-hand text-xs text-ink-muted break-all">
-                          talk.rashed@gmail.com
+                          rashedmolla541@gmail.com
                         </span>
                       </Link>
                     </div>

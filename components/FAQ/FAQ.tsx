@@ -47,7 +47,7 @@ const FAQS: FAQItem[] = [
   {
     id: "faq-8",
     q: "How do I get started?",
-    a: "Reach out via the contact form, email talk.rashed@gmail.com, or DM on LinkedIn. Tell me what you're building or what's broken — I'll tell you honestly if I'm the right fit and what the first week looks like.",
+    a: "Reach out via the contact form, email rashedmolla541@gmail.com, or DM on LinkedIn. Tell me what you're building or what's broken — I'll tell you honestly if I'm the right fit and what the first week looks like.",
   },
 ];
 
