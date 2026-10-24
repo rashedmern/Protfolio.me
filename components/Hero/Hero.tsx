@@ -191,15 +191,24 @@ export default function Hero() {
           className="hero-reveal-scale order-1 lg:order-2 flex justify-center lg:justify-end"
           style={{ animationDelay: "300ms" }}
         >
-          <div className="relative animate-float-paper">
-            {/* Minimalist Masking Tape at Top */}
-            <div
-              className="absolute -top-3 left-1/2 -translate-x-1/2 w-24 h-6 bg-paper/90 border border-primary-300 shadow-sm z-30 rotate-[-1deg] backdrop-blur-[1px]"
-              aria-hidden="true"
-            />
+          <div className="relative animate-float-paper pt-12">
+            {/* Hanging Setup: Wall Pin + Clean Ribbon Strap */}
+            <div className="absolute -top-6 left-1/2 -translate-x-1/2 flex flex-col items-center z-20 pointer-events-none">
+              {/* Pushpin (Green Dot on the wall) */}
+              <div className="relative w-4 h-4 rounded-full bg-primary-600 border border-primary-900 shadow-md flex items-center justify-center z-30">
+                {/* Pin highlight */}
+                <div className="w-1.5 h-1.5 rounded-full bg-white/60 absolute top-0.5 left-0.5" />
+                <div className="w-1 h-1 rounded-full bg-primary-800" />
+              </div>
+
+              {/* Hanging Ribbon (Fita) running down from pin to card */}
+              <div className="w-3 h-14 bg-primary-600/90 shadow-sm border-x border-primary-700/50 -mt-1.5 z-20 relative flex justify-center">
+                <div className="w-0.5 h-full bg-primary-200/40" />
+              </div>
+            </div>
 
             {/* Availability Badge */}
-            <div className="absolute -top-3 -right-4 sm:-right-8 z-30 bg-primary-200 px-3 py-1 font-hand text-xs text-ink shadow-md border border-primary-400 rotate-[6deg]">
+            <div className="absolute top-8 -right-4 sm:-right-8 z-30 bg-primary-200 px-3 py-1 font-hand text-xs text-ink shadow-md border border-primary-400 rotate-[6deg]">
               taking new projects ✦
             </div>
 
