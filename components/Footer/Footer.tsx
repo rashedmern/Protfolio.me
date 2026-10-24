@@ -11,7 +11,7 @@ export default function Footer() {
       <div className="flex flex-wrap justify-center gap-6 sm:gap-8 mb-4">
         {/* GitHub */}
         <Link
-          href="https://github.com/rashedxali"
+          href="https://github.com/rashedmern"
           target="_blank"
           rel="noopener noreferrer"
           title="GitHub"
@@ -29,7 +29,7 @@ export default function Footer() {
 
         {/* LinkedIn */}
         <Link
-          href="https://linkedin.com/in/rashedxali"
+          href="https://www.linkedin.com/in/rashed-m-3751a2294/"
           target="_blank"
           rel="noopener noreferrer"
           title="LinkedIn"
@@ -41,25 +41,9 @@ export default function Footer() {
           <span className="font-hand font-bold text-sm">LinkedIn</span>
         </Link>
 
-        {/* CodeForces */}
-        <Link
-          href="https://codeforces.com/profile/rashedxali"
-          target="_blank"
-          rel="noopener noreferrer"
-          title="CodeForces"
-          className="group flex flex-col items-center gap-1 hover:scale-110 transition-transform text-on-canvas-muted hover:text-primary-500"
-        >
-          <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-            <line x1="18" y1="20" x2="18" y2="10" />
-            <line x1="12" y1="20" x2="12" y2="4" />
-            <line x1="6" y1="20" x2="6" y2="14" />
-          </svg>
-          <span className="font-hand font-bold text-sm">CodeForces</span>
-        </Link>
-
         {/* LeetCode */}
         <Link
-          href="https://leetcode.com/u/rashedxali"
+          href="https://leetcode.com/u/rashed_webdev/"
           target="_blank"
           rel="noopener noreferrer"
           title="LeetCode"
@@ -73,7 +57,7 @@ export default function Footer() {
 
         {/* Blog (Medium) */}
         <Link
-          href="https://medium.com/@rashedxali"
+          href="https://medium.com/@rashedmolla541"
           target="_blank"
           rel="noopener noreferrer"
           title="Blog"
@@ -86,35 +70,6 @@ export default function Footer() {
             />
           </svg>
           <span className="font-hand font-bold text-sm">Blog</span>
-        </Link>
-
-        {/* YouTube */}
-        <Link
-          href="https://www.youtube.com/@rashedxali"
-          target="_blank"
-          rel="noopener noreferrer"
-          title="YouTube"
-          className="group flex flex-col items-center gap-1 hover:scale-110 transition-transform text-on-canvas-muted hover:text-primary-500"
-        >
-          <svg className="w-8 h-8" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
-            <path d="M23.5 6.19a3.02 3.02 0 0 0-2.12-2.14C19.5 3.55 12 3.55 12 3.55s-7.5 0-9.38.5A3.02 3.02 0 0 0 .5 6.19C0 8.08 0 12 0 12s0 3.92.5 5.81a3.02 3.02 0 0 0 2.12 2.14c1.88.5 9.38.5 9.38.5s7.5 0 9.38-.5a3.02 3.02 0 0 0 2.12-2.14C24 15.92 24 12 24 12s0-3.92-.5-5.81zM9.55 15.57V8.43L15.82 12l-6.27 3.57z" />
-          </svg>
-          <span className="font-hand font-bold text-sm">YouTube</span>
-        </Link>
-
-        {/* Projects (Notion) */}
-        <Link
-          href="https://www.notion.so/swerashed/224dcf97562481658568e0000a98b10a?v=224dcf97562481d79a66000c44f7aeb7&source=copy_link"
-          target="_blank"
-          rel="noopener noreferrer"
-          title="Projects"
-          className="group flex flex-col items-center gap-1 hover:scale-110 transition-transform text-on-canvas-muted hover:text-primary-500"
-        >
-          <svg className="w-8 h-8" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
-            <rect x="2" y="7" width="20" height="14" rx="2" />
-            <path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2" />
-          </svg>
-          <span className="font-hand font-bold text-sm">Projects</span>
         </Link>
       </div>
 

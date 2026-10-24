@@ -28,12 +28,10 @@ export default function Home() {
         url: "https://rashed.live",
         image: "https://rashed.live/profile.jpg",
         sameAs: [
-          "https://github.com/rashedxali",
-          "https://linkedin.com/in/rashedxali",
-          "https://leetcode.com/u/rashedxali",
-          "https://codeforces.com/profile/rashedxali",
-          "https://medium.com/@rashedxali",
-          "https://www.youtube.com/@rashedxali",
+          "https://github.com/rashedmern",
+          "https://www.linkedin.com/in/rashed-m-3751a2294/",
+          "https://leetcode.com/u/rashed_webdev/",
+          "https://medium.com/@rashedmolla541",
         ],
         worksFor: {
           "@type": "Organization",
