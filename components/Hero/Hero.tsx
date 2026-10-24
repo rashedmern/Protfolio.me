@@ -191,31 +191,15 @@ export default function Hero() {
           className="hero-reveal-scale order-1 lg:order-2 flex justify-center lg:justify-end"
           style={{ animationDelay: "300ms" }}
         >
-          <div className="relative animate-float-paper pt-14">
-            {/* Hanging Setup: Wall Pin + Bold Woven Ribbon Strap */}
-            <div className="absolute -top-6 left-1/2 -translate-x-1/2 flex flex-col items-center z-20 pointer-events-none">
-              {/* Pushpin (Green Dot with 3D depth) */}
-              <div className="relative w-5 h-5 rounded-full bg-primary-700 border-2 border-primary-900 shadow-md flex items-center justify-center z-30">
-                <div className="w-1.5 h-1.5 rounded-full bg-white/70 absolute top-0.5 left-0.5" />
-                <div className="w-2 h-2 rounded-full bg-primary-500" />
-              </div>
-
-              {/* Hanging Ribbon (Fita) - Wider, Richer Green Contrast & Weave */}
-              <div className="w-5 h-16 bg-gradient-to-b from-primary-800 via-primary-700 to-primary-600 shadow-md border-x-2 border-primary-900/60 -mt-2 z-20 relative flex items-center justify-center overflow-hidden">
-                {/* Woven fabric texture lines */}
-                <div
-                  className="absolute inset-0 opacity-25"
-                  style={{
-                    backgroundImage: "repeating-linear-gradient(0deg, #000 0, #000 2px, transparent 0, transparent 4px)",
-                  }}
-                />
-                {/* Clean center stripe */}
-                <div className="w-1 h-full bg-primary-300/60" />
-              </div>
-            </div>
+          <div className="relative animate-float-paper">
+            {/* Minimalist Masking Tape at Top */}
+            <div
+              className="absolute -top-3 left-1/2 -translate-x-1/2 w-24 h-6 bg-paper/90 border border-primary-300 shadow-sm z-30 rotate-[-1deg] backdrop-blur-[1px]"
+              aria-hidden="true"
+            />
 
             {/* Availability Badge */}
-            <div className="absolute top-10 -right-4 sm:-right-8 z-30 bg-primary-200 px-3 py-1 font-hand text-xs text-ink shadow-md border border-primary-400 rotate-[6deg]">
+            <div className="absolute -top-3 -right-4 sm:-right-8 z-30 bg-primary-200 px-3 py-1 font-hand text-xs text-ink shadow-md border border-primary-400 rotate-[6deg]">
               taking new projects ✦
             </div>
 
