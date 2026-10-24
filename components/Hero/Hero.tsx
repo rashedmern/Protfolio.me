@@ -191,24 +191,36 @@ export default function Hero() {
           className="hero-reveal-scale order-1 lg:order-2 flex justify-center lg:justify-end"
           style={{ animationDelay: "300ms" }}
         >
-          <div className="relative animate-float-paper">
-            {/* Hanging Paper Clip */}
-            <svg
-              className="absolute -top-10 left-1/2 -translate-x-1/2 w-8 h-16 text-on-canvas-muted z-20 drop-shadow-sm"
-              viewBox="0 0 32 64"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              aria-hidden="true"
-            >
-              <path
-                d="M16 4 C8 4 6 16 6 28 L6 48 C6 56 22 56 22 40 L22 20 C22 14 18 12 16 12 C14 12 12 14 12 18 L12 44"
-                strokeLinecap="round"
-              />
-            </svg>
+          <div className="relative animate-float-paper pt-8">
+            {/* Lanyard Strap / Ribbon */}
+            <div className="absolute -top-16 left-1/2 -translate-x-1/2 flex flex-col items-center z-20 pointer-events-none">
+              {/* Ribbon strap coming from top */}
+              <div className="relative w-8 h-16 bg-gradient-to-b from-primary-800 via-primary-700 to-primary-600 shadow-md flex items-center justify-center overflow-hidden border-x border-primary-900/30">
+                {/* Ribbon texture weave */}
+                <div
+                  className="absolute inset-0 opacity-20"
+                  style={{
+                    backgroundImage: "repeating-linear-gradient(45deg, #000 0, #000 2px, transparent 0, transparent 4px)",
+                  }}
+                />
+                {/* Thin center accent line */}
+                <div className="w-0.5 h-full bg-primary-300/40" />
+              </div>
+
+              {/* Metal Clasp / Swivel Hook */}
+              <div className="relative flex flex-col items-center -mt-1">
+                {/* Metal Ring */}
+                <div className="w-6 h-3 border-2 border-neutral-400 bg-gradient-to-r from-neutral-300 via-neutral-100 to-neutral-400 rounded-sm shadow-sm" />
+                {/* Swivel clip hook */}
+                <div className="w-3.5 h-5 bg-gradient-to-r from-neutral-400 via-neutral-200 to-neutral-400 rounded-b-md shadow-sm border border-neutral-500/40" />
+              </div>
+            </div>
+
+            {/* ID Card Slot Punch Hole */}
+            <div className="absolute top-9 left-1/2 -translate-x-1/2 w-7 h-2 bg-neutral-800/80 rounded-full z-30 shadow-inner border border-neutral-600/40" />
 
             {/* Availability Badge */}
-            <div className="absolute -top-2 -right-4 sm:-right-8 z-30 bg-primary-200 px-2.5 py-1 font-hand text-xs text-ink shadow-md border border-primary-400 rotate-[6deg]">
+            <div className="absolute top-6 -right-4 sm:-right-8 z-30 bg-primary-200 px-2.5 py-1 font-hand text-xs text-ink shadow-md border border-primary-400 rotate-[6deg]">
               taking new projects ✦
             </div>
 
